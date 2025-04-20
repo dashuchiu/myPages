@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
+/* 
+//... 1. Normalize
+//... 2. Global
+//... 3. Layout
+//... 4. Components
+//... 5. Design
+*/
+
+/* 
+//... 1. Normalize
+*/
+
+html,
+body,
+div,
+span,
+header,
+footer,
+section,
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+ol,
+menu,
+aside,
+button,
+main,
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+/* 
+//... 2. Global
+*/
+
+$pimary-color: #edf15b;
+$secondary-color: #f9f6f0;
+$gary-color: #d9d9d9;
+$accent-color-blue: #36a9ae;
+$accent-color-red: #b32b73;
+
+/* 
+//... 3. Layout
+ */
+.container {
+  max-width: 540px;
+  width: 100%;
+  margin: 0 auto;
+  // border: 1px solid black;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+  .col {
+    flex: 1;
+  }
+  .col-12,
+  .col-xl-4,
+  .col-xl-6 {
+    padding: 0 16px;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-xl {
+    max-width: 1140px;
+  }
+  .row {
+    .col-xl-4 {
+      width: 33.3333%;
+    }
+    .col-xl-6 {
+      width: 50%;
+    }
+  }
+}
+
+.box {
+  height: 100px;
+  background-color: skyblue;
+}
+
+/* 
+//... 4. Components
+*/
+
+.btn {
+  padding: 4px 8px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid #000;
+  font-size: 16px;
+
+  &:hover {
+    background-color: $pimary-color;
+  }
+  &.active {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: $gary-color;
+  font-size: 14px;
+  color: #000;
+  margin: 8px 4px 0 0;
+}
+.btnPlay {
+  display: inline-block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 4px 0;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $pimary-color;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .btnPlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+/* 
+//... 5. Design
+*/
+
+body {
+  padding-top: 48px;
+  overflow-x: hidden;
+}
+
+/* header */
+header.container {
+  // border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  h1 {
+    font-weight: 900;
+    font-size: 20px;
+  }
+  ul {
+    display: flex;
+    li {
+      margin-left: 12px;
+    }
+  }
+}
+
+/* outer */
+.outer {
+  position: relative;
+  main {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+  }
+  main.d-none {
+    // display: none;
+    transform: translateX(50%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+}
+
+/* main web */
+main.web {
+  .card {
+    .card-img {
+      position: relative;
+      margin-bottom: 12px;
+      .dot-item {
+        position: absolute;
+        top: 0.5rem;
+        left: 1rem;
+        span {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 1px solid $gary-color;
+          &.active {
+            background-color: $gary-color;
+          }
+        }
+      }
+      .arrow-item {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        #prev {
+          transform: translateX(-50%);
+        }
+        #next {
+          position: absolute;
+          right: 0;
+          transform: translateX(50%);
+        }
+      }
+    }
+
+    .card-content {
+      h3 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.swiper {
+  --swiper-theme-color: #edf15b;
+
+  // pointer-events: none;
+  [class^="swiper-button"] {
+    transform: translateY(-150%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main.container {
+    .card {
+      height: calc(100vh - 350px);
+    }
+  }
+}
+
+/* main design */
+main.design {
+  z-index: -1;
+  h3 {
+    color: $accent-color-blue;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  img {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 8px 0;
+  }
+}
+
+/* footer */
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  text-align: center;
+  span {
+    display: inline-block;
+    width: 50%;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 0;
+    &:nth-child(1) {
+      background-color: $accent-color-blue;
+    }
+    &:nth-child(2) {
+      background-color: $accent-color-red;
+    }
+  }
+}

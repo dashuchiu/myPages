@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHUNCHUN STUDIO</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="loading"></div>
+    <header id="head">
+      <h1 id="logo">CHUNCHUN STUDIO</h1>
+      <menu>
+        <ul>
+          <li><a href="#about">關於我們</a></li>
+          <li><a href="#product">商品項目</a></li>
+          <li><a href="#contact">聯絡資訊</a></li>
+        </ul>
+      </menu>
+      <nav class="">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </nav>
+
+      <!-- hero -->
+    </header>
+    <div class="hero">
+      <video
+        src="./images/video1.mp4"
+        class="video"
+        loop
+        autoplay
+        muted
+        playsinline
+        poster="./images/video1_poster.jpg"
+      ></video>
+      <button class="btn">商品訂購</button>
+    </div>
+
+    <!-- about -->
+    <main id="about">
+      <h3>關於我們</h3>
+      <p>
+        工作室Logo包含了花藝、甜點、調色盤種種手作，希望這些事物都能成為大家生活中溫柔的力量。
+      </p>
+    </main>
+
+    <!-- product -->
+    <main id="product">
+      <h3>商品品項</h3>
+      <div class="tabs">
+        <span>蛋糕</span>
+        <span>甜點</span>
+        <span>禮盒</span>
+      </div>
+      <!-- 輪播 -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- <div class="swiper-slide">
+            <div class="item">
+              <img src="./images/cake1.jpg" alt="" />
+              <h3>草莓鮮奶油蛋糕</h3>
+              <p>牛奶戚風‧香草布丁‧藍莓慕斯‧香草鮮奶油‧大湖草莓‧進口藍莓</p>
+            </div>
+          </div> -->
+        </div>
+        <!-- 導航按鈕 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </main>
+
+    <!-- 插圖 -->
+    <div class="box">
+      <div class="pic"></div>
+    </div>
+
+    <!-- 聯絡資訊 -->
+    <main id="contact">
+      <h3>聯絡資訊</h3>
+      <a href="#!" class="fa-brands fa-instagram"></a>
+      <a href="#!" class="fa-brands fa-facebook"></a>
+    </main>
+
+    <!-- gobackTop -->
+    <a id="top" href="#head" class="fa-solid fa-chevron-up"></a>
+
+    <!-- footer -->
+    <footer>
+      Copyright &copy; 2025 <a href="../index.html">CHUNCHUN STUDIO</a>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

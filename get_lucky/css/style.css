@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap");
+
+html,
+body,
+header,
+footer,
+main,
+menu,
+div,
+a,
+span,
+hr,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  font-family: "LXGW WenKai TC", serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 24px;
+}
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+:root {
+  --mainColor: #fff;
+  --mainAlpha40: #ffffff66;
+  --mainAlpha20: #ffffff33;
+  --secondary: #ecff1b;
+  --secondary40: #ecff1b66;
+  --secondary20: #ecff1b33;
+  --txtColor: #84ff00;
+  --subtxtColor: #666666;
+  --shadow: 0px 4px 4px #00000099;
+  --transition: all 800ms ease;
+  /* 測試border記得刪掉 */
+  --testBD: 1px solid #fff;
+}
+
+/* 首頁設計theme */
+#theme {
+  /* border: 1px solid #ffffff; */
+  width: 100%;
+  height: 100vh;
+}
+#theme h1 {
+  /* border: var(--testBD); */
+  width: 100%;
+  font-size: 40px;
+  font-weight: normal;
+  color: var(--mainColor);
+  text-align: center;
+  padding: 0.5em 1em;
+}
+#theme .slide {
+  /* border: 1px solid #da3b3b; */
+  width: 200px;
+  /* display: flex;
+  flex-wrap: nowrap; */
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  /* padding: 2em; */
+  z-index: 20;
+}
+#theme .slide .box {
+  /* border: 1px solid #d61313; */
+  width: 100%;
+  display: flex;
+  /* flex-wrap: nowrap; */
+  /* justify-content: center; */
+}
+#theme .slide .box a {
+  width: 100%;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+#theme .slide .box a img {
+  width: 100%;
+}
+#theme .slide .box a h2 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* left: 0; */
+  text-align: center;
+  font-size: 60px;
+  font-weight: normal;
+  color: var(--secondary);
+  text-shadow: var(--shadow);
+}
+#theme .slide .fa-solid {
+  font-size: 60px;
+  color: var(--mainColor);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  transition: var(--transition);
+  cursor: pointer;
+}
+#theme .slide .fa-solid:hover {
+  opacity: 1;
+}
+#theme .slide .fa-caret-left {
+  left: 0;
+}
+#theme .slide .fa-caret-right {
+  right: 0;
+}
+
+/* 內頁設計header & sign*/
+header {
+  /* border: 1px solid #fff; */
+  width: 100%;
+  height: 64px;
+  /* line-height: 64px; */
+  /* margin-top: 64px; */
+}
+header menu {
+  width: 100%;
+  height: 100%;
+}
+header menu ul {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid #00f; */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+header menu ul li a {
+  /* border: 1px solid #0f0; */
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0 0.2em;
+  color: var(--mainColor);
+  border: 1px solid var(--mainColor);
+  border-radius: 4px;
+  background-color: var(--mainAlpha20);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+header menu ul li a:hover {
+  background-color: var(--mainAlpha40);
+}
+header menu ul li a.action {
+  color: var(--secondary);
+  background-color: var(--secondary40);
+  border: 1px solid var(--secondary);
+}
+
+#sign {
+  /* border: 1px solid #0f0; */
+  width: 100%;
+  min-height: calc(100vh - 300px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sign .box {
+  /* border: 1px solid #fff; */
+  color: var(--mainColor);
+  width: 280px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+#sign .box h1 {
+  font-size: 36px;
+  font-weight: normal;
+  color: var(--secondary);
+  margin-bottom: 0.5em;
+}
+#sign .box ol.none {
+  display: none;
+}
+#sign .box ol li {
+  cursor: pointer;
+  margin-bottom: 0.8em;
+  font-size: 20px;
+  transition: var(--transition);
+}
+
+#sign .box ol li:hover {
+  transform: scale(1.4);
+}
+#sign .box ol li.action {
+  transform: scale(1.4) !important;
+  color: var(--txtColor) !important;
+  transition: none;
+}
+#sign .box .btn {
+  font-size: 20px;
+  padding: 0.3em 2em;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  background-color: var(--secondary20);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1.2em;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  font-family: inherit;
+}
+#sign .box .btn:hover {
+  background-color: var(--secondary40);
+}
+/* #sign .box .btn:active {
+  box-shadow: var(--shadow) inset;
+} */
+
+/* 籤文設計sign > paper */
+/* #sign .box {
+  border: 1px solid #f00;
+} */
+#sign .box .paper {
+  width: 188px;
+  height: 270px;
+  background-image: url(../images/paper.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  padding: 0.8em;
+  box-shadow: var(--shadow);
+}
+#sign .box .paper.none {
+  display: none;
+}
+#sign .box .paper .content {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--subtxtColor);
+  color: var(--subtxtColor);
+  display: flex;
+  flex-direction: column;
+}
+#sign .box .paper .content .num {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25em;
+}
+#sign .box .paper .content h3 {
+  font-size: 30px;
+  font-weight: normal;
+  padding: 0.2em 0;
+  border-top: 2px solid var(--subtxtColor);
+  border-bottom: 2px solid var(--subtxtColor);
+}
+#sign .box .paper .content .poemTxt {
+  font-size: 18px;
+  flex: 1;
+  margin: 0 auto;
+  writing-mode: vertical-lr;
+  letter-spacing: 4px;
+  line-height: 1.5;
+}
+/* 頁尾設計footer */
+footer {
+  width: 100%;
+  padding: 1.5em 1em;
+  color: var(--mainColor);
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+/* load動畫 */
+#load {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  /* display: flex; */
+}
+#load.none {
+  display: none;
+}
+#load .box {
+  /* border: 2px solid #0f0; */
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+}
+
+@media only screen and (min-width: 410px) {
+}
+@media only screen and (min-width: 920px) {
+  #theme h1 {
+    padding: 1.5em 1em 0.5em;
+  }
+  #theme .slide {
+    width: 100%;
+    min-width: 900px;
+    margin: auto;
+    position: static;
+  }
+  #theme .slide .box {
+    width: 100%;
+    position: static;
+    justify-content: center;
+  }
+  #theme .slide .box a {
+    width: 200px;
+  }
+  #theme .slide .fa-solid {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1440px) {
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="container container-xl">
+      <h1>YSC</h1>
+      <ul id="btn-group">
+        <li>
+          <button id="btn-web" class="btn">Web</button>
+        </li>
+        <li>
+          <button id="btn-design" class="btn">Design</button>
+        </li>
+      </ul>
+    </header>
+
+    <!-- main -->
+    <div class="outer">
+      <!-- web -->
+      <main class="web container container-xl">
+        <div class="swiper">
+          <div class="swiper-wrapper"></div>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+
+          <!-- 如果需要导航按钮 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </main>
+
+      <!-- design -->
+      <main class="design container container-xl d-none">
+        <h3>Banner</h3>
+        <div class="row">
+          <div class="col-12 col-xl-6">
+            <img src="./images/design-item-1.jpg" alt="" />
+          </div>
+          <div class="col-12 col-xl-6">
+            <img src="./images/design-item-2.jpg" alt="" />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <span>dashuchiu@gmail.com</span>
+      <span>0920-105472</span>
+    </footer>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/swiperModule.js"></script>
+  </body>
+</html>
