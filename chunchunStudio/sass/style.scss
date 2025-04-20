@@ -185,7 +185,7 @@ header {
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100vw / 16 * 9);
+  height: calc(100vw / 16 * 7);
   margin-bottom: 160px;
   .video {
     width: 100%;
@@ -218,10 +218,14 @@ header {
     margin-bottom: 1em;
   }
   p {
+    display: inline-block;
     line-height: 1.8;
     text-align: justify;
     letter-spacing: 4px;
     color: var(--txtGray);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

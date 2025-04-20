@@ -31,7 +31,7 @@ let mySwiper = getSlide(false);
 const load = document.querySelector("#loading");
 setTimeout(function () {
   load.remove();
-}, 2500);
+}, 1500);
 
 // bar anima
 const bar = document.querySelector("nav");
