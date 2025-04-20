@@ -4,7 +4,7 @@ let data = [
     title: "CHUNCHUN STUDIO",
     desc: "甜點工作室的靜態網頁。",
     tags: ["HTML", "CSS", "JavaScript"],
-    url: "../chunchunStudio/index.html",
+    url: "../myPages/chunchunStudio/index.html",
   },
   {
     id: 2,
@@ -18,6 +18,6 @@ let data = [
     title: "Get Lucky",
     desc: "抽籤網頁。",
     tags: ["HTML", "CSS", "JavaScript"],
-    url: "../get_lucky/index.html",
+    url: "../myPages/get_lucky/index.html",
   },
 ];
