@@ -44,6 +44,7 @@ img {
   list-style: none;
   color: inherit;
 }
+
 img {
   width: 100%;
   vertical-align: bottom;
@@ -67,7 +68,7 @@ $accent-color-red: #b32b73;
 //... 3. Layout
  */
 .container {
-  max-width: 540px;
+  max-width: 400px;
   width: 100%;
   margin: 0 auto;
   // border: 1px solid black;
@@ -154,14 +155,6 @@ $accent-color-red: #b32b73;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .btnPlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-}
-
 /* 
 //... 5. Design
 */
@@ -173,7 +166,6 @@ body {
 
 /* header */
 header.container {
-  // border: 1px solid #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -190,7 +182,7 @@ header.container {
   }
 }
 
-/* outer */
+/* outer 換頁切換效果 */
 .outer {
   position: relative;
   main {
@@ -257,20 +249,19 @@ main.web {
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .tag-container {
+    height: 80px;
+  }
+}
+
 .swiper {
   --swiper-theme-color: #edf15b;
 
   // pointer-events: none;
   [class^="swiper-button"] {
     transform: translateY(-150%);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  main.container {
-    .card {
-      height: calc(100vh - 350px);
-    }
   }
 }
 

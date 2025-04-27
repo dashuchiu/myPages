@@ -15,10 +15,10 @@ var mySwiper = new Swiper(".swiper", {
 
   slidesPerView: 1,
   spaceBetween: 0,
-  breakpointsBase: "container",
+  // breakpointsBase: "container",
   breakpoints: {
-    768: {
-      //当屏幕宽度大于等于768
+    1200: {
+      //当屏幕宽度大于等于
       slidesPerView: 3,
       spaceBetween: 30,
     },

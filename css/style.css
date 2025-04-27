@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 /* 
 //... 1. Normalize
@@ -59,7 +60,7 @@ button {
 //... 3. Layout
  */
 .container {
-  max-width: 540px;
+  max-width: 400px;
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
@@ -142,13 +143,6 @@ button {
   background-color: #edf15b;
 }
 
-@media screen and (min-width: 1200px) {
-  .btnPlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-}
 /* 
 //... 5. Design
 */
@@ -175,7 +169,7 @@ header.container ul li {
   margin-left: 12px;
 }
 
-/* outer */
+/* outer 換頁切換效果 */
 .outer {
   position: relative;
 }
@@ -235,6 +229,11 @@ main.web .card .card-content p {
   font-size: 14px;
 }
 
+@media screen and (min-width: 1200px) {
+  .tag-container {
+    height: 80px;
+  }
+}
 .swiper {
   --swiper-theme-color: #edf15b;
 }
@@ -242,11 +241,6 @@ main.web .card .card-content p {
   transform: translateY(-150%);
 }
 
-@media screen and (min-width: 1200px) {
-  main.container .card {
-    height: calc(100vh - 350px);
-  }
-}
 /* main design */
 main.design {
   z-index: -1;

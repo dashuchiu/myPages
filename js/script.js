@@ -21,12 +21,15 @@ for (const key of data) {
 
   cardContent.append(title, desc);
 
+  let tagContainer = document.createElement("div");
+  tagContainer.classList.add("tag-container");
   for (const tag of key.tags) {
     let tagItem = document.createElement("span");
     tagItem.classList.add("tag");
     tagItem.textContent = tag;
-    cardContent.appendChild(tagItem);
+    tagContainer.appendChild(tagItem);
   }
+  cardContent.appendChild(tagContainer);
 
   let btnPlay = document.createElement("a");
   btnPlay.classList.add("btnPlay");
