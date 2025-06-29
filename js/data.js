@@ -25,6 +25,13 @@ let data = [
     title: "Get Lucky",
     desc: "抽籤網頁。",
     tags: ["HTML", "CSS", "JavaScript"],
-    url: "./petslove/index.html",
+    url: "./get_lucky/index.html",
+  },
+  {
+    id: 5,
+    title: "Tarot Online",
+    desc: "線上塔羅牌，卡片翻轉呈現「過去、現在、未來」結果。",
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "./tarot_online/index.html",
   },
 ];

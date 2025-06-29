@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
+/* reset style */
+html,
+body,
+div,
+header,
+main,
+a,
+span,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+footer,
+aside,
+nav,
+menu,
+button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  font-family: "Noto Sans TC", serif;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+:root {
+  --parmaryColor: #fff;
+  --transition: all 800ms ease;
+  --shadow: #0008;
+}
+
+/* btn共用 */
+.btn {
+  font-size: 16px;
+  padding: 0.4em 1em;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+}
+
+/* header */
+header {
+  padding: 32px 1em 0;
+  position: relative;
+  z-index: 30;
+}
+
+header h1 {
+  color: var(--parmaryColor);
+  font-weight: normal;
+  letter-spacing: 8px;
+  text-align: center;
+  line-height: 64px;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 0;
+  transition: var(--transition);
+}
+main .box {
+  width: 60%;
+  max-width: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+main .box .slide {
+  display: flex;
+  transition: var(--transition);
+}
+main .box .slide .item {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* 翻牌 */
+main .box .slide .item .card {
+  position: relative;
+  transition: var(--transition);
+  transform: perspective(800px);
+}
+/* 撐住空間的容器 */
+main .box .slide .item .card img {
+  width: 100%;
+  opacity: 0;
+}
+main .box .slide .item .card > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+main .box .slide .item .card .front {
+  transition: var(--transition);
+  background-image: url(../images/0.jpg);
+  border-radius: 12px;
+}
+main .box .slide .item .card .front.reverse {
+  transform: scaleY(-1);
+}
+
+main .box .slide .item .card .back {
+  transition: var(--transition);
+  background-image: url(../images/cover.jpg);
+  border-radius: 12px;
+}
+main .box .slide .item .card.rot {
+  transform: rotateY(180deg);
+}
+main .box .slide .item .card.rot .back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+main .box .slide .item h2 {
+  width: 100%;
+  color: var(--parmaryColor);
+  position: absolute;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 4px 4px 4px var(--shadow);
+  line-height: 1.8;
+  bottom: 20px;
+  left: 0;
+}
+/* 左右按鈕 */
+main .box .bar {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  color: var(--parmaryColor);
+  transform: translateY(-50%);
+}
+main .box .bar > div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  text-shadow: 0 4px 4px var(--shadow);
+  transition: var(--transition);
+}
+main .box .bar > div:hover {
+  opacity: 1;
+}
+main .box .bar #prev {
+  left: 10px;
+}
+main .box .bar #next {
+  right: 10px;
+}
+
+main .btn {
+  position: absolute;
+  right: 1em;
+  bottom: -2.5em;
+  display: none;
+}
+
+/* aside */
+aside {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: var(--transition);
+  z-index: 50;
+}
+aside.info {
+  transform: translateX(0%);
+}
+aside .box {
+  width: 90%;
+  height: 90%;
+  border-radius: 12px;
+  background-color: #b8b8b8e4;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 4em;
+  letter-spacing: 4px;
+  line-height: 1.6;
+  position: relative;
+}
+aside .box .close {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  cursor: pointer;
+}
+
+/* start */
+#start {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 12em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#start h3 {
+  display: inline-block;
+  color: var(--parmaryColor);
+  line-height: 1.5;
+  letter-spacing: 4px;
+  margin-bottom: 2em;
+  opacity: 0;
+  animation: show 2s ease forwards;
+}
+#start .btn {
+  margin-left: 12em;
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* footer */
+footer {
+  color: var(--parmaryColor);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  line-height: 3;
+}
+
+@media only screen and (min-width: 410px) {
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 1024px) {
+  main .btn {
+    position: absolute;
+    right: 5em;
+    bottom: 0em;
+  }
+  main .box {
+    overflow: visible;
+  }
+  main .box .slide {
+    justify-content: center;
+  }
+  main .box .slide .item {
+    margin: 0 2em;
+  }
+  main .box .bar {
+    display: none;
+  }
+
+  aside .box {
+    padding: 12em;
+  }
+}
+@media only screen and (min-width: 1440px) {
+}

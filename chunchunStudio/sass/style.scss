@@ -232,6 +232,9 @@ header {
 #product {
   color: var(--primary);
   text-align: center;
+  background-image: url(../images/decBg.png);
+  background-position: center;
+  background-size: 50%;
 
   .tabs {
     padding-bottom: 1em;
@@ -292,7 +295,8 @@ header {
       opacity: 0.5;
       transition: var(--transition);
       text-shadow: var(--shodow);
-      top: calc(90vw / 2 - 15px);
+      top: 50%;
+      transform: translateY(-50%);
       &:hover {
         opacity: 1;
       }
@@ -318,7 +322,6 @@ header {
       font-size: clamp(24px, 8vw, 120px);
       letter-spacing: 16px;
       // border: 1px solid #000;
-;
     }
     &:nth-child(2) {
       position: absolute;
@@ -382,15 +385,14 @@ header {
     background-image: linear-gradient(
       116deg,
       rgba(161, 102, 0, 1) 0%,
-      rgba(255, 241, 181, 1) 66%,
-    
+      rgba(255, 241, 181, 1) 66%
     );
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     &:hover {
-    filter: brightness(1.5);
+      filter: brightness(1.5);
     }
   }
   .fa-instagram {
@@ -422,12 +424,14 @@ header {
   position: fixed;
   font-size: 20px;
   color: var(--secondary);
-  right: 1em;
+  right: 2em;
   bottom: 2em;
+  padding: 0.5em;
   z-index: 99;
   transition: var(--transition);
-  animation: jump 800ms infinite linear;
-
+  animation: jump 1200ms infinite linear;
+  background-color: var(--primary);
+  border-radius: 50%;
   // &:hover {
   //   color: var(--secondary);
   //   animation: jump 800ms infinite linear;
@@ -478,15 +482,6 @@ footer {
     .btn {
       left: 4em;
       bottom: 4em;
-    }
-  }
-
-  // product
-  #product {
-    .swiper {
-      *[class^="swiper-button"] {
-        top: calc((90vw / 2 - 15px) / 3);
-      }
     }
   }
 

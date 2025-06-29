@@ -229,6 +229,9 @@ header nav.active .bar:nth-child(3) {
 #product {
   color: var(--primary);
   text-align: center;
+  background-image: url(../images/decBg.png);
+  background-position: center;
+  background-size: 50%;
 }
 #product .tabs {
   padding-bottom: 1em;
@@ -282,7 +285,8 @@ header nav.active .bar:nth-child(3) {
   opacity: 0.5;
   transition: var(--transition);
   text-shadow: var(--shodow);
-  top: calc(45vw - 15px);
+  top: 50%;
+  transform: translateY(-50%);
 }
 #product .swiper *[class^=swiper-button]:hover {
   opacity: 1;
@@ -396,11 +400,14 @@ header nav.active .bar:nth-child(3) {
   position: fixed;
   font-size: 20px;
   color: var(--secondary);
-  right: 1em;
+  right: 2em;
   bottom: 2em;
+  padding: 0.5em;
   z-index: 99;
   transition: var(--transition);
-  animation: jump 800ms infinite linear;
+  animation: jump 1200ms infinite linear;
+  background-color: var(--primary);
+  border-radius: 50%;
 }
 
 @keyframes jump {
@@ -443,9 +450,6 @@ footer {
   .hero .btn {
     left: 4em;
     bottom: 4em;
-  }
-  #product .swiper *[class^=swiper-button] {
-    top: calc((45vw - 15px) / 3);
   }
   #top {
     right: 2em;

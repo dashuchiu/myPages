@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="探索神秘塔羅，占卜你的未來！提供專業解讀，幫助你洞察愛情、事業與人生方向。"
+    />
+    <meta
+      name="keywords"
+      content="塔羅占卜, 塔羅牌解析, 心靈指引, 命運預測, 愛情占卜, 事業運勢,小遊戲,免費小遊戲,免費算命"
+    />
+    <title>Tarot Online | 無聊來玩塔羅吧</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tarot Online</h1>
+    </header>
+    <main>
+      <div class="box">
+        <div class="slide">
+          <div class="item">
+            <div class="card">
+              <img src="./images/cover.jpg" alt="" />
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+            <h2>過去</h2>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="./images/cover.jpg" alt="" />
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+            <h2>現在</h2>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="./images/cover.jpg" alt="" />
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+            <h2>未來</h2>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="fa-3x fa-solid fa-caret-left" id="prev"></div>
+          <div class="fa-3x fa-solid fa-caret-right" id="next"></div>
+        </div>
+      </div>
+      <button id="replay" onclick="window.location.reload()" class="btn">
+        重抽牌
+      </button>
+    </main>
+    <aside>
+      <div class="box">
+        <h2>愚人</h2>
+        <p>
+          目前，你正在經歷一個重要的評估階段，可能需要面對過去的決定，並做出負責任的選擇。
+        </p>
+        <div class="fa-2x fa-solid fa-xmark close"></div>
+      </div>
+    </aside>
+    <div id="start">
+      <h3>請先想好問題<br />靜心一分鐘後抽牌</h3>
+      <button id="play" class="btn">抽牌</button>
+    </div>
+    <footer>Copyright &copy; 2025 <a href="../index.html">YUSHUCHIU</a></footer>
+  </body>
+</html>
+<script src="./js/tarot.js"></script>
+<script src="./js/play.js"></script>

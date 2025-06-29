@@ -21,6 +21,10 @@ function getSlide(bool) {
         slidesPerView: 3,
         spaceBetween: 20,
       },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
     },
   });
 }
@@ -29,9 +33,12 @@ let mySwiper = getSlide(false);
 
 // loading
 const load = document.querySelector("#loading");
-setTimeout(function () {
+// setTimeout(function () {
+//   load.remove();
+// }, 1500);
+window.addEventListener("load", function () {
   load.remove();
-}, 1500);
+});
 
 // bar anima
 const bar = document.querySelector("nav");
@@ -106,4 +113,14 @@ function renderSlide(idx = 0) {
 }
 
 //Rellax
-var rellax = new Rellax('.rellax');
+var rellax = new Rellax(".rellax");
+
+//gotop display
+const gotop = document.querySelector("#top");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 100) {
+    gotop.style.display = "block";
+  } else {
+    gotop.style.display = "none";
+  }
+});
