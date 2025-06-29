@@ -104,3 +104,6 @@ function renderSlide(idx = 0) {
       .classList.remove("swiper-button-lock");
   }
 }
+
+//Rellax
+var rellax = new Rellax('.rellax');

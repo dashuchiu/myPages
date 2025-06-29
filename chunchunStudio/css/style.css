@@ -230,6 +230,9 @@ header nav.active .bar:nth-child(3) {
   color: var(--primary);
   text-align: center;
 }
+#product .tabs {
+  padding-bottom: 1em;
+}
 #product .tabs > span {
   display: inline-block;
   padding: 1.5em 2em 2em;
@@ -286,44 +289,86 @@ header nav.active .bar:nth-child(3) {
 }
 
 .box {
+  position: relative;
   width: 70vw;
-  height: 108.8888888889vw;
   margin: 0 auto;
   margin-bottom: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.box .pic {
-  width: 100%;
-  height: 100%;
+.box p:nth-child(1) {
+  position: absolute;
+  color: var(--primary);
+  font-size: clamp(24px, 8vw, 120px);
+  letter-spacing: 16px;
+}
+.box p:nth-child(2) {
+  position: absolute;
+  writing-mode: vertical-lr;
+  top: 20%;
+  left: 30%;
+  color: var(--primaryAlpha60);
+  font-size: clamp(16px, 6vw, 64px);
+}
+.box p:nth-child(3) {
+  position: absolute;
+  writing-mode: vertical-lr;
+  top: 5%;
+  right: 30%;
+  color: var(--txtGray);
+  font-size: clamp(12px, 4vw, 32px);
+}
+.box img {
+  display: block;
+  width: min(100%, 800px);
   margin: 0 auto;
-  background-image: url(../images/pic.png);
-  background-attachment: fixed;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
 }
-@supports (-webkit-overflow-scrolling: touch) {
-  .box .pic {
-    background-attachment: scroll;
-  }
+.box img:nth-of-type(1) {
+  z-index: 99;
 }
 
 #contact {
+  position: relative;
   width: 170px;
   line-height: 1.8;
-  background-color: var(--primary);
   margin: 0 auto;
-  border-radius: 50px;
-  color: #000;
+  color: var(--primary);
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.337254902);
   margin-bottom: 300px;
 }
+#contact::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  border: 1px solid var(--secondary);
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-radius: 50px;
+  animation: rot 3000ms infinite linear;
+  z-index: -99;
+}
+#contact h3 {
+  margin-bottom: 16px;
+}
 #contact .fa-brands {
-  margin: 0.1em;
+  margin: 0.3em;
   transition: var(--transition);
+  background-image: linear-gradient(116deg, rgb(161, 102, 0) 0%, rgb(255, 241, 181) 66%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #contact .fa-brands:hover {
-  color: var(--secondary);
+  filter: brightness(1.5);
 }
 #contact .fa-instagram {
   font-size: 38px;
@@ -332,6 +377,20 @@ header nav.active .bar:nth-child(3) {
   font-size: 36px;
 }
 
+@keyframes rot {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    opacity: 0;
+  }
+}
 #top {
   display: inline-block;
   position: fixed;
