@@ -76,6 +76,8 @@ button {
   flex: 1;
 }
 .row .col-12,
+.row .col-xl-2,
+.row .col-xl-3,
 .row .col-xl-4,
 .row .col-xl-6 {
   padding: 0 16px;
@@ -87,6 +89,12 @@ button {
 @media screen and (min-width: 1200px) {
   .container-xl {
     max-width: 1140px;
+  }
+  .row .col-xl-2 {
+    width: 16.6666%;
+  }
+  .row .col-xl-3 {
+    width: 25%;
   }
   .row .col-xl-4 {
     width: 33.3333%;

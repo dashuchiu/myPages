@@ -84,6 +84,8 @@ $accent-color-red: #b32b73;
     flex: 1;
   }
   .col-12,
+  .col-xl-2,
+  .col-xl-3,
   .col-xl-4,
   .col-xl-6 {
     padding: 0 16px;
@@ -98,6 +100,12 @@ $accent-color-red: #b32b73;
     max-width: 1140px;
   }
   .row {
+    .col-xl-2 {
+      width: 16.6666%;
+    }
+    .col-xl-3 {
+      width: 25%;
+    }
     .col-xl-4 {
       width: 33.3333%;
     }
@@ -210,7 +218,7 @@ main.web {
       height: 300px;
       position: relative;
       margin-bottom: 12px;
-      img{
+      img {
         height: 100%;
         object-fit: cover;
       }
